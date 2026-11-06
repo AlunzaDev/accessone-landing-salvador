@@ -12,8 +12,8 @@ export default function Landing() {
   const [open, setOpen] = useState(false);
   return <div className="site-shell">
     <header className="header">
-      <a className="brand" href="#inicio" aria-label="AccessOne El Salvador, inicio">
-        <span className="brand-mark">A1</span><span>ACCESS<span>ONE</span><small>EL SALVADOR</small></span>
+      <a className="brand" href="#inicio" aria-label="AccessOne Parking El Salvador, inicio">
+        <img src="/el salvador@4x-100.jpg" alt="AccessOne Parking El Salvador" />
       </a>
       <button className="menu" aria-expanded={open} aria-label="Abrir menú" onClick={() => setOpen(!open)}>{open ? 'Cerrar' : 'Menú'}</button>
       <nav className={open ? 'nav open' : 'nav'} aria-label="Navegación principal">
@@ -59,6 +59,6 @@ export default function Landing() {
         <p className="eyebrow">El siguiente movimiento</p><h2>Hagamos que tu<br/>estacionamiento <em>fluya.</em></h2><p>Cuéntanos sobre tu proyecto en El Salvador. Los datos de contacto oficiales se incorporarán antes del lanzamiento.</p><a href="mailto:contacto@example.com">Iniciar conversación <span>↗</span></a>
       </section>
     </main>
-    <footer><a className="brand" href="#inicio"><span className="brand-mark">A1</span><span>ACCESS<span>ONE</span></span></a><p>Propuesta de landing · Contenido de contacto provisional</p><span>© {new Date().getFullYear()}</span></footer>
+    <footer><a className="brand" href="#inicio"><img src="/el salvador@4x-100.jpg" alt="AccessOne Parking El Salvador" /></a><p>Propuesta de landing · Contenido de contacto provisional</p><span>© {new Date().getFullYear()}</span></footer>
   </div>;
 }
