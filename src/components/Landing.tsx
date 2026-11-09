@@ -1,5 +1,6 @@
 import Header from './Header';
 import Footer from './Footer';
+import Icon, { type IconName } from './Icon';
 import './landing.css';
 
 const mexicoMetrics = [
@@ -11,13 +12,13 @@ const mexicoMetrics = [
   ['+40', 'proyectos en operación'],
 ];
 
-const homeServices = [
-  ['01', 'Control de accesos', 'Tecnología y procesos para ordenar el ingreso y salida de vehículos.'],
-  ['02', 'Operación de parqueos', 'Administración profesional enfocada en eficiencia, seguridad y servicio.'],
-  ['03', 'Valet parking', 'Recepción y entrega de vehículos con personal capacitado y control operativo.'],
-  ['04', 'Mantenimiento', 'Programas preventivos y correctivos para conservar cada espacio en buen estado.'],
-  ['05', 'Servicios al usuario', 'Limpieza, asistencia básica, apoyo vial y atención dentro del parqueo.'],
-  ['06', 'Diseño y equipamiento', 'Conceptualización, obra e integración de equipos de control de acceso.'],
+const homeServices: [string, IconName, string, string][] = [
+  ['01', 'access', 'Control de accesos', 'Tecnología y procesos para ordenar el ingreso y salida de vehículos.'],
+  ['02', 'parking', 'Operación de parqueos', 'Administración profesional enfocada en eficiencia, seguridad y servicio.'],
+  ['03', 'valet', 'Valet parking', 'Recepción y entrega de vehículos con personal capacitado y control operativo.'],
+  ['04', 'maintenance', 'Mantenimiento', 'Programas preventivos y correctivos para conservar cada espacio en buen estado.'],
+  ['05', 'support', 'Servicios al usuario', 'Limpieza, asistencia básica, apoyo vial y atención dentro del parqueo.'],
+  ['06', 'design', 'Diseño y equipamiento', 'Conceptualización, obra e integración de equipos de control de acceso.'],
 ];
 
 export default function Landing() {
@@ -38,7 +39,7 @@ export default function Landing() {
       </section>
       <section className="home-services" aria-labelledby="home-services-title">
         <div className="home-section-heading"><p className="tag">Servicios en El Salvador</p><h2 id="home-services-title">Soluciones para cada punto de la experiencia.</h2><a href="/servicios">Ver todos los servicios <b>→</b></a></div>
-        <div className="home-service-grid">{homeServices.map(([number,title,text]) => <a href="/servicios" key={title}><span>{number}</span><h3>{title}</h3><p>{text}</p><b aria-hidden="true">↗</b></a>)}</div>
+        <div className="home-service-grid">{homeServices.map(([number,icon,title,text]) => <a href="/servicios" key={title}><span>{number}</span><Icon name={icon} className="home-service-icon" /><h3>{title}</h3><p>{text}</p><b aria-hidden="true">↗</b></a>)}</div>
       </section>
       <section className="home-cta"><p className="tag">AccessOne El Salvador</p><h2>Convirtamos cada acceso en una mejor experiencia.</h2><p>Contanos qué necesita tu parqueo y construyamos una solución a la medida.</p><a href="/contacto">Hablemos de tu proyecto <b>↗</b></a></section>
     </main>
