@@ -1,7 +1,7 @@
 import Header from './Header';
 import Footer from './Footer';
-import Icon, { type IconName } from './Icon';
-import { CountUp } from '@alunzadev/accessone-ui';
+import { CountUp, ServiceCard, type IconName } from '@alunzadev/accessone-ui';
+import '@alunzadev/accessone-ui/styles/service-card.css';
 import './landing.css';
 
 function MetricValue({ value }: { value: string }) {
@@ -20,13 +20,13 @@ const mexicoMetrics = [
   ['+40', 'proyectos en operación'],
 ];
 
-const homeServices: [string, IconName, string, string][] = [
-  ['01', 'access', 'Control de accesos', 'Tecnología y procesos para ordenar el ingreso y salida de vehículos.'],
-  ['02', 'parking', 'Operación de parqueos', 'Administración profesional enfocada en eficiencia, seguridad y servicio.'],
-  ['03', 'valet', 'Valet parking', 'Recepción y entrega de vehículos con personal capacitado y control operativo.'],
-  ['04', 'maintenance', 'Mantenimiento', 'Programas preventivos y correctivos para conservar cada espacio en buen estado.'],
-  ['05', 'support', 'Servicios al usuario', 'Limpieza, asistencia básica, apoyo vial y atención dentro del parqueo.'],
-  ['06', 'design', 'Diseño y equipamiento', 'Conceptualización, obra e integración de equipos de control de acceso.'],
+const homeServices: [IconName, string, string][] = [
+  ['access', 'Control de accesos', 'Tecnología y procesos para ordenar el ingreso y salida de vehículos.'],
+  ['parking', 'Operación de parqueos', 'Administración profesional enfocada en eficiencia, seguridad y servicio.'],
+  ['valet', 'Valet parking', 'Recepción y entrega de vehículos con personal capacitado y control operativo.'],
+  ['maintenance', 'Mantenimiento', 'Programas preventivos y correctivos para conservar cada espacio en buen estado.'],
+  ['support', 'Servicios al usuario', 'Limpieza, asistencia básica, apoyo vial y atención dentro del parqueo.'],
+  ['design', 'Diseño y equipamiento', 'Conceptualización, obra e integración de equipos de control de acceso.'],
 ];
 
 export default function Landing() {
@@ -47,7 +47,7 @@ export default function Landing() {
       </section>
       <section className="home-services" aria-labelledby="home-services-title">
         <div className="home-section-heading"><div><p className="tag">Servicios en Centroamérica</p><h2 id="home-services-title">Soluciones para cada punto de la experiencia.</h2></div><a href="/servicios">Ver todos los servicios <b>→</b></a></div>
-        <div className="home-service-grid">{homeServices.map(([number,icon,title,text]) => <a href="/servicios" key={title}><span>{number}</span><Icon name={icon} className="home-service-icon" /><h3>{title}</h3><p>{text}</p><b aria-hidden="true">↗</b></a>)}</div>
+        <div className="home-service-grid">{homeServices.map(([icon,title,text]) => <ServiceCard key={title} icon={icon} title={title} description={text} />)}</div>
       </section>
       <section className="home-cta"><p className="tag">AccessOne Centroamérica</p><h2>Convirtamos cada acceso en una mejor experiencia.</h2><p>Contanos qué necesita tu parqueo y construyamos una solución a la medida.</p><a href="/contacto">Hablemos de tu proyecto <b>↗</b></a></section>
     </main>

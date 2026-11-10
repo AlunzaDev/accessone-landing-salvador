@@ -1,9 +1,12 @@
-import { useState } from 'react';
+import {
+  IdentityTabs as SharedIdentityTabs,
+  type IdentitySection,
+} from '@alunzadev/accessone-ui';
+import '@alunzadev/accessone-ui/styles/identity-tabs.css';
 
-const sections = [
+const sections: IdentitySection[] = [
   {
     id: 'mision',
-    number: '01',
     title: 'Misión',
     eyebrow: 'Nuestro propósito',
     content: <>
@@ -14,7 +17,6 @@ const sections = [
   },
   {
     id: 'vision',
-    number: '02',
     title: 'Visión',
     eyebrow: 'Hacia dónde vamos',
     content: <>
@@ -24,7 +26,6 @@ const sections = [
   },
   {
     id: 'filosofia',
-    number: '03',
     title: 'Filosofía',
     eyebrow: 'Lo que nos sostiene',
     content: <>
@@ -35,7 +36,6 @@ const sections = [
   },
   {
     id: 'valor-agregado',
-    number: '04',
     title: 'Valor agregado',
     eyebrow: 'Más allá de la operación',
     content: <>
@@ -46,24 +46,5 @@ const sections = [
 ];
 
 export default function IdentityTabs() {
-  const [index, setIndex] = useState(0);
-  const active = sections[index];
-  const go = (next: number, focus = false) => {
-    const i = (next + sections.length) % sections.length;
-    setIndex(i);
-    if (focus) requestAnimationFrame(() => document.getElementById(`tab-${sections[i].id}`)?.focus());
-  };
-
-  return <section className="identity" aria-labelledby="identity-title">
-    <div className="identity-heading"><p className="tag">Lo que nos define</p><h2 id="identity-title">Conoce nuestra esencia.</h2><p>Recorre cada principio a tu ritmo para descubrir cómo pensamos, trabajamos y generamos valor.</p></div>
-    <div className="essence">
-      <div className="essence-nav" role="tablist" aria-label="Identidad AccessOne">
-        {sections.map((section, i) => <button key={section.id} role="tab" id={`tab-${section.id}`} aria-selected={i === index} aria-controls={`panel-${section.id}`} tabIndex={i === index ? 0 : -1} onClick={() => go(i)} onKeyDown={(e) => { if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); go(index + 1, true); } if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); go(index - 1, true); } }}><span>{section.number}</span>{section.title}</button>)}
-      </div>
-      <article className="essence-card" role="tabpanel" id={`panel-${active.id}`} aria-labelledby={`tab-${active.id}`} key={active.id}>
-        <div className="essence-head"><b>{active.number}</b><h3>{active.title}</h3><em>{active.eyebrow}</em></div>
-        <div className="essence-body">{active.content}</div>
-      </article>
-    </div>
-  </section>;
+  return <SharedIdentityTabs sections={sections} />;
 }
