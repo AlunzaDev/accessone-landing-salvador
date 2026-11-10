@@ -46,7 +46,7 @@ export default function Header({ revealAfterScene = false }: HeaderProps) {
   const headerClass = [revealAfterScene ? 'home-header' : '', visible ? 'is-visible' : '', docked ? 'is-docked' : ''].filter(Boolean).join(' ');
 
   return <header className={headerClass}>
-    <a className="brand" href="/" aria-label="AccessOne Parking El Salvador, inicio"><BrandLogo background="dark" /></a>
+    <a className="brand" href="/" aria-label="AccessOne Parking Centroamérica, inicio"><BrandLogo background="dark" /></a>
     <button className="menu" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="main-navigation">{open ? 'Cerrar' : 'Menú'}</button>
     <nav id="main-navigation" className={open ? 'open' : ''} aria-label="Navegación principal">{links.map(([href, label]) => {
       const isCurrent = currentPath === href;

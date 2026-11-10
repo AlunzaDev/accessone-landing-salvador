@@ -1,6 +1,6 @@
-# AccessOne Parking El Salvador — contenido para revisión
+# AccessOne Parking Centroamérica — contenido para revisión
 
-Este documento reúne la información visible en la landing para que el equipo de El Salvador la revise sin necesidad de entrar al código.
+Este documento reúne la información visible en la landing para que el equipo de Centroamérica la revise sin necesidad de entrar al código.
 
 ## Cómo revisar este documento
 
@@ -8,10 +8,10 @@ Por favor, marquen cada punto como aprobado o escriban el cambio solicitado. Con
 
 ## Validaciones generales
 
-- [ ] El tono y el voseo son adecuados para la comunicación de AccessOne en El Salvador.
+- [ ] El tono y el voseo son adecuados para la comunicación de AccessOne en Centroamérica y conservan el carácter salvadoreño.
 - [ ] Se aprueba el uso de la palabra “parqueo” en lugar de “estacionamiento”.
 - [ ] Las cifras de experiencia en México están vigentes y autorizadas para publicación.
-- [ ] Los servicios descritos estarán disponibles en El Salvador.
+- [ ] Los servicios descritos estarán disponibles en Centroamérica.
 - [ ] La razón social y el domicilio fiscal son correctos.
 - [ ] El correo, teléfono, ubicación y horario de atención son correctos.
 - [ ] El proceso y portal de facturación están definidos.
@@ -29,7 +29,7 @@ Por favor, marquen cada punto como aprobado o escriban el cambio solicitado. Con
 - Contacto
 - Aviso de privacidad
 
-**Footer:** AccessOne Parking El Salvador · © [año actual]
+**Footer:** AccessOne Parking Centroamérica · © [año actual]
 
 ---
 
@@ -37,7 +37,7 @@ Por favor, marquen cada punto como aprobado o escriban el cambio solicitado. Con
 
 ## Portada
 
-**AccessOne Parking El Salvador**
+**AccessOne Parking Centroamérica**
 
 ### Diseño, mantenimiento y operación de parqueos
 
@@ -47,9 +47,9 @@ CTA: **Descubre más**
 
 **Trayectoria construida en México**
 
-### Experiencia que ahora ponemos al servicio de El Salvador.
+### Experiencia que ahora ponemos al servicio de Centroamérica.
 
-Estas cifras corresponden a la operación y experiencia desarrollada por AccessOne en México. Son el respaldo con el que iniciamos esta nueva etapa para atender proyectos salvadoreños.
+Estas cifras corresponden a la operación y experiencia desarrollada por AccessOne en México. Son el respaldo con el que iniciamos esta nueva etapa para atender proyectos salvadoreños y centroamericanos.
 
 | Cifra | Descripción | País atribuido |
 |---|---|---|
@@ -60,7 +60,7 @@ Estas cifras corresponden a la operación y experiencia desarrollada por AccessO
 | +35 M | usuarios atendidos al año | México |
 | +40 | proyectos en operación | México |
 
-> Revisión obligatoria: confirmar cada cifra y la autorización para publicarla en el sitio de El Salvador.
+> Revisión obligatoria: confirmar cada cifra y la autorización para publicarla en el sitio de Centroamérica.
 
 ## ¿Qué ofrecemos?
 
@@ -83,7 +83,7 @@ Acompañamos cada proyecto desde la asesoría y conceptualización hasta la cons
 
 ## Cierre
 
-**AccessOne El Salvador**
+**AccessOne Centroamérica**
 
 ### Convirtamos cada acceso en una mejor experiencia.
 
@@ -140,7 +140,7 @@ Mantener un crecimiento sostenido mediante la excelencia y la mejora continua.
 7. **Limpieza:** personal para conservar las instalaciones en condiciones óptimas.
 8. **Horarios y tarifas flexibles:** cobro por hora o fracción, tarifa única, pensión diaria o mensual y esquemas personalizados.
 
-> Confirmar si todos estos servicios, incluidos autolavado, cerrajero 24 horas y asistencia médica, estarán disponibles en El Salvador.
+> Confirmar si todos estos servicios, incluidos autolavado, cerrajero 24 horas y asistencia médica, estarán disponibles en Centroamérica.
 
 El cierre de la página menciona **+30,000 espacios de parqueo** operados como parte de la trayectoria en México.
 
@@ -168,7 +168,7 @@ Pendiente de confirmar:
 
 ### Tu siguiente proyecto empieza aquí.
 
-Contanos cómo podemos mejorar la operación y experiencia de tu parqueo en El Salvador.
+Contanos cómo podemos mejorar la operación y experiencia de tu parqueo en Centroamérica.
 
 | Campo | Información actual | Estado |
 |---|---|---|
@@ -198,7 +198,7 @@ El formulario todavía es una demostración y no envía información.
 
 | Campo | Información actual |
 |---|---|
-| Razón social | [Razón social de AccessOne El Salvador] |
+| Razón social | [Razón social de AccessOne Centroamérica] |
 | Domicilio | [Dirección fiscal], San Salvador, El Salvador |
 | Correo | privacidad.sv@ejemplo.com |
 | Teléfono | +503 0000 0000 |
@@ -224,9 +224,9 @@ También propone derechos de acceso, rectificación, cancelación y oposición, 
 |---|---|---|---|
 | Dirección general |  | Pendiente |  |
 | Operaciones México |  | Pendiente | Validar cifras y trayectoria |
-| Operaciones El Salvador |  | Pendiente | Validar servicios y vocabulario local |
+| Operaciones Centroamérica |  | Pendiente | Validar servicios y vocabulario local |
 | Comercial / Marketing |  | Pendiente | Validar tono, voseo y llamados a la acción |
-| Legal El Salvador |  | Pendiente | Validar aviso de privacidad |
-| Facturación El Salvador |  | Pendiente | Definir DTE y portal |
+| Legal Centroamérica |  | Pendiente | Validar aviso de privacidad |
+| Facturación Centroamérica |  | Pendiente | Definir DTE y portal |
 | Tecnología |  | Pendiente | Configurar formulario y datos reales |
 

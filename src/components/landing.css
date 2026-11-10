@@ -140,7 +140,7 @@ header nav a[aria-current="page"]:after{transform:scaleX(1);transform-origin:lef
 @media(max-width:780px){.essence-nav{grid-template-columns:repeat(2,1fr);border-radius:20px}.essence-nav button{border-radius:14px}.essence-head{flex-wrap:wrap}.essence-head em{display:none}.essence-body ul{grid-template-columns:1fr}.essence-card{padding:30px 22px}}
 @media(prefers-reduced-motion:reduce){.essence-card{animation:none}}
 
-/* Contacto El Salvador */
+/* Contacto Centroamérica */
 .contact-hero h1{max-width:1000px}
 .contact-directory{padding:100px 7vw;background:#FDFEFF;color:#2E315C}
 .directory-heading{display:grid;grid-template-columns:.75fr 1.35fr;gap:5vw;align-items:start;margin-bottom:55px}
@@ -213,7 +213,7 @@ html{scroll-behavior:smooth}
 .legal-contact a b{margin-left:18px;font-size:14px}
 @media(max-width:900px){.legal{grid-template-columns:1fr;padding:60px 6vw 80px}.legal-index{position:static}.legal-rights{grid-template-columns:1fr}.legal-contact{flex-direction:column;align-items:flex-start}}
 
-/* Inicio: experiencia de México aplicada a El Salvador */
+/* Inicio: experiencia de México aplicada a Centroamérica */
 .home-proof{padding:110px 7vw;background:#FDFEFF;color:#2E315C}
 .home-proof-heading{display:grid;grid-template-columns:1.15fr .85fr;gap:8vw;align-items:end;margin-bottom:60px}
 .home-proof-heading h2{max-width:800px;margin:18px 0 0;font:600 clamp(42px,5.5vw,74px)/1 'Manrope';letter-spacing:-.055em}
@@ -239,9 +239,11 @@ html{scroll-behavior:smooth}
 .home-offer-list h3{margin:0 0 9px;font:600 21px 'Manrope'}
 .home-offer-list p{margin:0;color:#bfc1d3;line-height:1.6}
 .home-services{padding:110px 7vw;background:#f5f6fa;color:#2E315C}
-.home-section-heading{display:grid;grid-template-columns:1fr 1.3fr;gap:7vw;align-items:end;margin-bottom:50px}
-.home-section-heading h2{margin:0;font:600 clamp(40px,5vw,68px)/1 'Manrope';letter-spacing:-.05em}
-.home-section-heading>a{grid-column:2;color:#2E315C;font-weight:700;text-decoration:none}
+.home-section-heading{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(180px,.7fr);gap:clamp(32px,7vw,110px);align-items:end;margin-bottom:50px}
+.home-section-heading>div{min-width:0}
+.home-section-heading .tag{margin:0 0 18px}
+.home-section-heading h2{max-width:780px;margin:0;font:600 clamp(40px,5vw,68px)/1 'Manrope';letter-spacing:-.05em}
+.home-section-heading>a{justify-self:end;margin-bottom:5px;color:#2E315C;font-weight:700;text-decoration:none;white-space:nowrap}
 .home-section-heading>a b{margin-left:18px;color:#125bf5}
 .home-service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .home-service-grid>a{position:relative;min-height:300px;padding:30px;border:1px solid #e0e2ea;border-radius:18px;background:#FDFEFF;color:#2E315C;text-decoration:none;overflow:hidden}
@@ -259,7 +261,7 @@ html{scroll-behavior:smooth}
 .home-cta>a{display:inline-block;padding:17px 22px;border-radius:9px;background:#2E315C;color:#FDFEFF;text-decoration:none;font-weight:700}
 .home-cta>a b{margin-left:30px;color:#FEED00}
 .home-cta>a:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(46,49,92,.22)}
-@media(max-width:900px){.home-proof-heading,.home-offer,.home-section-heading{grid-template-columns:1fr}.home-proof-heading{gap:25px}.home-metrics,.home-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-section-heading>a{grid-column:1}.home-offer-copy,.home-offer-list{padding:75px 7vw}}
+@media(max-width:900px){.home-proof-heading,.home-offer,.home-section-heading{grid-template-columns:1fr}.home-proof-heading{gap:25px}.home-metrics,.home-service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-section-heading{gap:22px}.home-section-heading>a{justify-self:start;margin-bottom:0}.home-offer-copy,.home-offer-list{padding:75px 7vw}}
 @media(max-width:600px){.home-proof,.home-services,.home-cta{padding:78px 6vw}.home-metrics,.home-service-grid{grid-template-columns:1fr}.home-metrics article{min-height:200px}.home-service-grid>a{min-height:280px}.home-offer-copy,.home-offer-list{padding:70px 6vw}}
 
 /* Normalización final de la paleta oficial */

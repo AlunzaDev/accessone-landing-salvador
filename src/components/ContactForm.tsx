@@ -9,7 +9,7 @@ export default function ContactForm() {
   };
 
   return <form className="contact-form" onSubmit={handleSubmit}>
-    <div className="form-heading"><p className="tag">Contanos sobre tu proyecto</p><h2>Empecemos la conversación.</h2><p>Dejanos tus datos y el equipo de AccessOne El Salvador podrá darle seguimiento cuando se habilite el canal oficial.</p></div>
+    <div className="form-heading"><p className="tag">Contanos sobre tu proyecto</p><h2>Empecemos la conversación.</h2><p>Dejanos tus datos y el equipo de AccessOne Centroamérica podrá darle seguimiento cuando se habilite el canal oficial.</p></div>
     <div className="form-grid">
       <label><span>Nombre completo</span><input type="text" name="nombre" placeholder="Ej. Andrea López" autoComplete="name" required /></label>
       <label><span>Empresa</span><input type="text" name="empresa" placeholder="Ej. Centro Comercial San Salvador" autoComplete="organization" /></label>
@@ -19,6 +19,6 @@ export default function ContactForm() {
       <label className="form-wide"><span>Contanos un poco más</span><textarea name="mensaje" rows={5} placeholder="Describí el proyecto, la ubicación y sus necesidades principales…" required></textarea></label>
     </div>
     <div className="form-footer"><p>Este formulario es una demostración y todavía no envía información.</p><button type="submit">Enviar solicitud <b>↗</b></button></div>
-    {submitted && <p className="form-notice" role="status">¡Gracias! El formulario quedó validado. El envío se habilitará cuando tengamos los datos oficiales del equipo en El Salvador.</p>}
+    {submitted && <p className="form-notice" role="status">¡Gracias! El formulario quedó validado. El envío se habilitará cuando tengamos los datos oficiales del equipo en Centroamérica.</p>}
   </form>;
 }

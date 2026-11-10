@@ -24,13 +24,13 @@ const homeServices: [string, IconName, string, string][] = [
 export default function Landing() {
   return <div className="shell">
     <section className="scene-zero" id="inicio" aria-labelledby="scene-zero-title">
-      <div className="scene-zero-copy"><p>AccessOne Parking El Salvador</p><h1 id="scene-zero-title">Diseño, mantenimiento y operación de parqueos</h1></div>
+      <div className="scene-zero-copy"><p>AccessOne Parking Centroamérica</p><h1 id="scene-zero-title">Diseño, mantenimiento y operación de parqueos</h1></div>
       <a className="scene-zero-scroll" href="#experiencia" aria-label="Continuar a la siguiente sección">Descubre más <span>↓</span></a>
     </section>
     <Header revealAfterScene />
     <main>
       <section className="home-proof" id="experiencia" aria-labelledby="home-proof-title">
-        <div className="home-proof-heading"><div><p className="tag">Trayectoria construida en México</p><h2 id="home-proof-title">Experiencia que ahora ponemos al servicio de El Salvador.</h2></div><p>Estas cifras corresponden a la operación y experiencia desarrollada por AccessOne en México. Son el respaldo con el que iniciamos esta nueva etapa para atender proyectos salvadoreños.</p></div>
+        <div className="home-proof-heading"><div><p className="tag">Trayectoria construida en México</p><h2 id="home-proof-title">Experiencia que ahora ponemos al servicio de Centroamérica.</h2></div><p>Estas cifras corresponden a la operación y experiencia desarrollada por AccessOne en México. Son el respaldo con el que iniciamos esta nueva etapa para atender proyectos salvadoreños y centroamericanos.</p></div>
         <div className="home-metrics">{mexicoMetrics.map(([value,label]) => <article key={label}><strong>{value}</strong><span>{label}</span><small>México</small></article>)}</div>
       </section>
       <section className="home-offer">
@@ -38,10 +38,10 @@ export default function Landing() {
         <div className="home-offer-list"><article><span>01</span><div><h3>Planeación y diseño</h3><p>Proyecto arquitectónico, obra civil, instalaciones eléctricas, red y voz.</p></div></article><article><span>02</span><div><h3>Tecnología y ejecución</h3><p>Equipos de control, implementación, estandarización de procesos y puesta en marcha.</p></div></article><article><span>03</span><div><h3>Operación y mejora</h3><p>Administración profesional orientada a la seguridad, imagen, ahorro y rentabilidad.</p></div></article></div>
       </section>
       <section className="home-services" aria-labelledby="home-services-title">
-        <div className="home-section-heading"><p className="tag">Servicios en El Salvador</p><h2 id="home-services-title">Soluciones para cada punto de la experiencia.</h2><a href="/servicios">Ver todos los servicios <b>→</b></a></div>
+        <div className="home-section-heading"><div><p className="tag">Servicios en Centroamérica</p><h2 id="home-services-title">Soluciones para cada punto de la experiencia.</h2></div><a href="/servicios">Ver todos los servicios <b>→</b></a></div>
         <div className="home-service-grid">{homeServices.map(([number,icon,title,text]) => <a href="/servicios" key={title}><span>{number}</span><Icon name={icon} className="home-service-icon" /><h3>{title}</h3><p>{text}</p><b aria-hidden="true">↗</b></a>)}</div>
       </section>
-      <section className="home-cta"><p className="tag">AccessOne El Salvador</p><h2>Convirtamos cada acceso en una mejor experiencia.</h2><p>Contanos qué necesita tu parqueo y construyamos una solución a la medida.</p><a href="/contacto">Hablemos de tu proyecto <b>↗</b></a></section>
+      <section className="home-cta"><p className="tag">AccessOne Centroamérica</p><h2>Convirtamos cada acceso en una mejor experiencia.</h2><p>Contanos qué necesita tu parqueo y construyamos una solución a la medida.</p><a href="/contacto">Hablemos de tu proyecto <b>↗</b></a></section>
     </main>
     <Footer />
   </div>;
