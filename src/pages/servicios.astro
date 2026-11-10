@@ -1,6 +1,7 @@
 ---
 import InteriorLayout from '../layouts/InteriorLayout.astro';
 import Icon from '../components/Icon';
+import { CountUp } from '@alunzadev/accessone-ui';
 import type { IconName } from '../components/Icon';
 const services: { icon: IconName; title: string; text: string; items?: string[] }[] = [
   { icon: 'access', title: 'Control de accesos y salidas', text: 'Sistemas para gestionar el ingreso y egreso de vehículos con tecnología de vanguardia, aprovechando mejor cada ubicación y manteniendo el control de las áreas de circulación.' },
@@ -17,5 +18,5 @@ const services: { icon: IconName; title: string; text: string; items?: string[] 
   <section class="page-hero"><p class="tag">Servicios</p><h1>Una operación. Todos los frentes.</h1><p>Soluciones conectadas para diseñar, equipar, operar y mantener parqueos en Centroamérica.</p></section>
   <section class="services-intro"><p class="tag">Experiencia integral</p><h2>Todo lo que un parqueo necesita para operar mejor.</h2><p>Integramos infraestructura, tecnología y atención para crear soluciones confiables, adaptables y centradas en la experiencia de cada usuario.</p></section>
   <section class="solutions services-catalog"><div class="cards services-grid">{services.map((service,i) => <article><span>{String(i+1).padStart(2,'0')}</span><div class="icon"><Icon name={service.icon} className="service-icon" /></div><h3>{service.title}</h3><p>{service.text}</p>{service.items && <ul>{service.items.map((item) => <li>{item}</li>)}</ul>}<b>AccessOne <i>↗</i></b></article>)}</div></section>
-  <section class="service-proof"><p class="tag">Trayectoria construida en México</p><strong>+30,000</strong><h2>espacios de parqueo</h2><p>Experiencia desarrollada en México en parqueos, hospitales, clubes deportivos, exposiciones y centros comerciales; conocimiento que ahora ponemos al servicio de proyectos en Centroamérica.</p><a href="/contacto">Contanos sobre tu proyecto <b>↗</b></a></section>
+  <section class="service-proof"><p class="tag">Trayectoria construida en México</p><strong><CountUp client:load value={30000} prefix="+" /></strong><h2>espacios de parqueo</h2><p>Experiencia desarrollada en México en parqueos, hospitales, clubes deportivos, exposiciones y centros comerciales; conocimiento que ahora ponemos al servicio de proyectos en Centroamérica.</p><a href="/contacto">Contanos sobre tu proyecto <b>↗</b></a></section>
 </InteriorLayout>

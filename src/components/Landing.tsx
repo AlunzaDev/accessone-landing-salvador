@@ -1,7 +1,15 @@
 import Header from './Header';
 import Footer from './Footer';
 import Icon, { type IconName } from './Icon';
+import { CountUp } from '@alunzadev/accessone-ui';
 import './landing.css';
+
+function MetricValue({ value }: { value: string }) {
+  const match = value.match(/^(\D*)([\d,]+)(.*)$/);
+  if (!match) return <>{value}</>;
+  const [, prefix, digits, suffix] = match;
+  return <CountUp value={Number(digits.replace(/,/g, ''))} prefix={prefix} suffix={suffix} />;
+}
 
 const mexicoMetrics = [
   ['+35', 'años de experiencia'],
@@ -31,7 +39,7 @@ export default function Landing() {
     <main>
       <section className="home-proof" id="experiencia" aria-labelledby="home-proof-title">
         <div className="home-proof-heading"><div><p className="tag">Trayectoria construida en México</p><h2 id="home-proof-title">Experiencia que ahora ponemos al servicio de Centroamérica.</h2></div><p>Estas cifras corresponden a la operación y experiencia desarrollada por AccessOne en México. Son el respaldo con el que iniciamos esta nueva etapa para atender proyectos salvadoreños y centroamericanos.</p></div>
-        <div className="home-metrics">{mexicoMetrics.map(([value,label]) => <article key={label}><strong>{value}</strong><span>{label}</span><small>México</small></article>)}</div>
+        <div className="home-metrics">{mexicoMetrics.map(([value,label]) => <article key={label}><strong><MetricValue value={value} /></strong><span>{label}</span><small>México</small></article>)}</div>
       </section>
       <section className="home-offer">
         <div className="home-offer-copy"><p className="tag">¿Qué ofrecemos?</p><h2>De la idea a una operación que funciona.</h2><p>Acompañamos cada proyecto desde la asesoría y conceptualización hasta la construcción, instalación y operación del parqueo.</p><a href="/nosotros">Conoce AccessOne <b>↗</b></a></div>
