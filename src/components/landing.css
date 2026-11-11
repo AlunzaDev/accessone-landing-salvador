@@ -103,7 +103,7 @@ header nav a[aria-current="page"]:after{transform:scaleX(1);transform-origin:lef
 @media(max-width:780px){.services-intro{display:block;padding:70px 6vw}.services-intro h2{margin-top:18px}.service-proof{padding:85px 6vw}}
 /* Esencia: lector uno a la vez */
 
-/* Contacto Centroamérica */
+/* Contacto El Salvador */
 .contact-hero h1{max-width:1000px}
 .contact-directory{padding:100px 7vw;background:#FDFEFF;color:#2E315C}
 .directory-heading{display:grid;grid-template-columns:.75fr 1.35fr;gap:5vw;align-items:start;margin-bottom:55px}
@@ -176,7 +176,7 @@ html{scroll-behavior:smooth}
 .legal-contact a b{margin-left:18px;font-size:14px}
 @media(max-width:900px){.legal{grid-template-columns:1fr;padding:60px 6vw 80px}.legal-index{position:static}.legal-rights{grid-template-columns:1fr}.legal-contact{flex-direction:column;align-items:flex-start}}
 
-/* Inicio: experiencia de México aplicada a Centroamérica */
+/* Inicio: experiencia de México aplicada a El Salvador */
 .home-proof{padding:110px 7vw;background:#FDFEFF;color:#2E315C}
 .home-proof-heading{display:grid;grid-template-columns:1.15fr .85fr;gap:8vw;align-items:end;margin-bottom:60px}
 .home-proof-heading h2{max-width:800px;margin:18px 0 0;font:600 clamp(42px,5.5vw,74px)/1 'Manrope';letter-spacing:-.055em}

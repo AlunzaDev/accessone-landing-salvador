@@ -1,12 +1,12 @@
 import type { LandingBrandConfig, NavigationLink } from '@alunzadev/accessone-ui';
 
 export const brand: LandingBrandConfig = {
-  name: 'AccessOne Parking Centroamérica',
-  region: 'Centroamérica',
+  name: 'AccessOne Parking El Salvador',
+  region: 'El Salvador',
   locale: 'es-SV',
   logos: {
-    onLight: '/Recurso 11@4x (1).png',
-    onDark: '/Recurso 10@4x (1).png',
+    onLight: '/elsalvador@4x.png',
+    onDark: '/salvadorclaro@4x.png',
   },
 };
 
