@@ -19,7 +19,16 @@ const services: { icon: IconName; title: string; text: string; items?: string[] 
 ---
 <InteriorLayout title="Servicios | AccessOne El Salvador" description="Servicios integrales para diseñar, operar y mantener parqueos en El Salvador.">
   <section class="page-hero"><p class="tag">Servicios</p><h1>Una operación. Todos los frentes.</h1><p>Soluciones conectadas para diseñar, equipar, operar y mantener parqueos en El Salvador.</p></section>
-  <section class="services-intro"><p class="tag">Experiencia integral</p><h2>Todo lo que un parqueo necesita para operar mejor.</h2><p>Integramos infraestructura, tecnología y atención para crear soluciones confiables, adaptables y centradas en la experiencia de cada usuario.</p></section>
+  <section class="services-intro" aria-labelledby="services-intro-title">
+    <div class="services-intro-heading">
+      <p class="tag">Experiencia integral</p>
+      <h2 id="services-intro-title">Todo lo que un parqueo necesita para operar mejor.</h2>
+    </div>
+    <div class="services-intro-copy">
+      <span aria-hidden="true"></span>
+      <p>Integramos infraestructura, tecnología y atención para crear soluciones confiables, adaptables y centradas en la experiencia de cada usuario.</p>
+    </div>
+  </section>
   <section class="solutions services-catalog"><ServiceCatalog client:load ctaLabel="Contanos sobre tu proyecto" services={services.map(({ text, ...service }) => ({ ...service, description: text }))} /></section>
   <section class="service-proof"><p class="tag">Trayectoria construida en México</p><strong><CountUp client:load value={30000} prefix="+" /></strong><h2>espacios de parqueo</h2><p>Experiencia desarrollada en México en parqueos, hospitales, clubes deportivos, exposiciones y centros comerciales; conocimiento que ahora ponemos al servicio de proyectos en El Salvador.</p><a href="/contacto">Contanos sobre tu proyecto <b>↗</b></a></section>
 </InteriorLayout>
