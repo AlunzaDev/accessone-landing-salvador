@@ -10,4 +10,4 @@ npm run dev
 npm run build
 ```
 
-Los datos de contacto son provisionales. No publicar sin sustituirlos por información oficial de AccessOne El Salvador.
+El contacto comercial fue confirmado para AccessOne El Salvador. La dirección, el horario y los datos legales del aviso de privacidad siguen pendientes de validación.

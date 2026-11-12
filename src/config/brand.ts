@@ -8,6 +8,10 @@ export const brand: LandingBrandConfig = {
     onLight: '/elsalvador@4x.png',
     onDark: '/salvadorclaro@4x.png',
   },
+  contact: {
+    email: 'iochoa@accessone.com.sv',
+    phone: '+503 7830 6923',
+  },
 };
 
 export const navigation: readonly NavigationLink[] = [

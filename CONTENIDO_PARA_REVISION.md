@@ -172,8 +172,8 @@ Contanos cómo podemos mejorar la operación y experiencia de tu parqueo en El S
 
 | Campo | Información actual | Estado |
 |---|---|---|
-| Correo | contacto.sv@ejemplo.com | Dato de ejemplo |
-| Teléfono | +503 0000 0000 | Dato de ejemplo |
+| Correo | iochoa@accessone.com.sv | Confirmado · Imelda Morales Ochoa |
+| Teléfono | +503 7830 6923 | Confirmado · Imelda Morales Ochoa |
 | Ubicación | San Salvador | Dirección por confirmar |
 | Horario | Lunes a viernes · 8:00 a 17:00 | Horario por confirmar |
 
