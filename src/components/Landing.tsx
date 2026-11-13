@@ -1,6 +1,7 @@
 import Header from './Header';
 import Footer from './Footer';
-import { CountUp, MediaGallery, MediaPlaceholder, ServiceCard, type IconName } from '@alunzadev/accessone-ui';
+import { ServiceCard, type IconName } from '@alunzadev/accessone-ui';
+import CountUp from './CountUp';
 import '@alunzadev/accessone-ui/styles/media.css';
 import '@alunzadev/accessone-ui/styles/service-card.css';
 import '@alunzadev/accessone-ui/styles/landing.css';
@@ -26,7 +27,6 @@ const mexicoMetrics = [
 const homeServices: [IconName, string, string][] = [
   ['access', 'Control de accesos', 'Tecnología y procesos para ordenar el ingreso y salida de vehículos.'],
   ['parking', 'Operación de parqueos', 'Administración profesional enfocada en eficiencia, seguridad y servicio.'],
-  ['valet', 'Valet parking', 'Recepción y entrega de vehículos con personal capacitado y control operativo.'],
   ['maintenance', 'Mantenimiento', 'Programas preventivos y correctivos para conservar cada espacio en buen estado.'],
   ['support', 'Servicios al usuario', 'Limpieza, asistencia básica, apoyo vial y atención dentro del parqueo.'],
   ['design', 'Diseño y equipamiento', 'Conceptualización, obra e integración de equipos de control de acceso.'],
@@ -35,7 +35,7 @@ const homeServices: [IconName, string, string][] = [
 export default function Landing() {
   return <div className="shell">
     <section className="scene-zero" id="inicio" aria-labelledby="scene-zero-title">
-      <div className="scene-zero-copy"><p>AccessOne Parking El Salvador</p><h1 id="scene-zero-title">Diseño, mantenimiento y operación de parqueos</h1></div>
+      <div className="scene-zero-copy"><h1 id="scene-zero-title">Diseño, mantenimiento y operación de parqueos</h1></div>
       <a className="scene-zero-scroll" href="#experiencia" aria-label="Continuar a la siguiente sección">Descubrí más <span>↓</span></a>
     </section>
     <Header revealAfterScene />
@@ -48,25 +48,26 @@ export default function Landing() {
         <div className="home-offer-copy"><p className="tag">¿Qué ofrecemos?</p><h2>De la idea a una operación que funciona.</h2><p>Acompañamos cada proyecto desde la asesoría y conceptualización hasta la construcción, instalación y operación del parqueo.</p><a href="/nosotros">Conocé AccessOne <b>↗</b></a></div>
         <div className="home-offer-list"><article><span>01</span><div><h3>Planeación y diseño</h3><p>Proyecto arquitectónico, obra civil, instalaciones eléctricas, red y voz.</p></div></article><article><span>02</span><div><h3>Tecnología y ejecución</h3><p>Equipos de control, implementación, estandarización de procesos y puesta en marcha.</p></div></article><article><span>03</span><div><h3>Operación y mejora</h3><p>Administración profesional orientada a la seguridad, imagen, ahorro y rentabilidad.</p></div></article></div>
       </section>
-      {/* TODO media: video #1 — reel de operación (16:9) */}
       <section className="accessone-media-section accessone-media-section--navy" aria-labelledby="home-video-title">
-        <div className="accessone-media-section__heading"><div><p className="tag">AccessOne en operación</p><h2 id="home-video-title">Así se ve una operación que funciona.</h2></div><p>Un recorrido por nuestros estacionamientos: accesos, valet, tecnología y equipo en acción.</p></div>
-        <MediaPlaceholder kind="video" label="Video institucional / reel de operación" hint="16:9 · 60–90 s · MP4 o YouTube/Vimeo" />
+        <div className="accessone-media-section__heading"><div><p className="tag">AccessOne en operación</p><h2 id="home-video-title">Así se ve una operación que funciona.</h2></div><p>Un recorrido por nuestros estacionamientos: accesos, tecnología y equipo en acción.</p></div>
+        <video className="accessone-real-video" controls preload="metadata" poster="/HEATER.png" playsInline>
+          <source src="/MANTENIMIENTO.mp4" type="video/mp4" />
+          Tu navegador no puede reproducir este video.
+        </video>
       </section>
       <section className="home-services" aria-labelledby="home-services-title">
         <div className="home-section-heading"><div><p className="tag">Servicios en El Salvador</p><h2 id="home-services-title">Soluciones para cada punto de la experiencia.</h2></div><a href="/servicios">Ver todos los servicios <b>→</b></a></div>
         <div className="home-service-grid">{homeServices.map(([icon,title,text]) => <ServiceCard key={title} icon={icon} title={title} description={text} />)}</div>
       </section>
-      {/* TODO media: galería de proyectos */}
       <section className="accessone-media-section" aria-labelledby="home-gallery-title">
         <div className="accessone-media-section__heading"><div><p className="tag">Proyectos</p><h2 id="home-gallery-title">Espacios que operamos todos los días.</h2></div><p>Galería de proyectos: centros comerciales, hospitales, clubes y más.</p></div>
-        <MediaGallery items={[
-          { label: 'Proyecto destacado', hint: 'Foto principal · horizontal' },
-          { label: 'Control de accesos', hint: 'Barreras / casetas' },
-          { label: 'Valet parking', hint: 'Equipo en servicio' },
-          { label: 'Mantenimiento', hint: 'Señalización y pintura' },
-          { label: 'Tecnología', hint: 'Equipos y taquillas' },
-        ]} />
+        <div className="accessone-real-gallery">
+          <figure><img src="/HEATER.png" alt="Estacionamiento operado por AccessOne" loading="lazy" /></figure>
+          <figure><img src="/ACCESO.png" alt="Control de acceso vehicular" loading="lazy" /></figure>
+          <figure><img src="/OPERACION DE ESTACIONAMIENTO.png" alt="Operación de estacionamiento" loading="lazy" /></figure>
+          <figure><img src="/TECNOLOGIA.png" alt="Tecnología para control de estacionamientos" loading="lazy" /></figure>
+          <figure><img src="/2.png" alt="Control de acceso mediante torniquetes" loading="lazy" /></figure>
+        </div>
       </section>
       <section className="home-cta"><p className="tag">AccessOne El Salvador</p><h2>Convirtamos cada acceso en una mejor experiencia.</h2><p>Contanos qué necesita tu parqueo y construyamos una solución a la medida.</p><a href="/contacto">Hablemos de tu proyecto <b>↗</b></a></section>
     </main>

@@ -15,7 +15,7 @@ export default function ContactForm() {
       <label><span>Empresa</span><input type="text" name="empresa" placeholder="Ej. Centro Comercial San Salvador" autoComplete="organization" /></label>
       <label><span>Correo electrónico</span><input type="email" name="correo" placeholder="nombre@empresa.com.sv" autoComplete="email" required /></label>
       <label><span>Teléfono</span><input type="tel" name="telefono" placeholder="+503 0000 0000" autoComplete="tel" required /></label>
-      <label className="form-wide"><span>¿En qué podemos apoyarte?</span><select name="servicio" defaultValue="" required><option value="" disabled>Seleccioná un servicio</option><option>Operación de parqueos</option><option>Control de accesos y salidas</option><option>Mantenimiento</option><option>Valet parking</option><option>Tecnología y equipamiento</option><option>Otro servicio</option></select></label>
+      <label className="form-wide"><span>¿En qué podemos apoyarte?</span><select name="servicio" defaultValue="" required><option value="" disabled>Seleccioná un servicio</option><option>Operación de parqueos</option><option>Control de accesos y salidas</option><option>Mantenimiento</option><option>Tecnología y equipamiento</option><option>Otro servicio</option></select></label>
       <label className="form-wide"><span>Contanos un poco más</span><textarea name="mensaje" rows={5} placeholder="Describí el proyecto, la ubicación y sus necesidades principales…" required></textarea></label>
     </div>
     <div className="form-footer"><p>Este formulario es una demostración y todavía no envía información.</p><button type="submit">Enviar solicitud <b>↗</b></button></div>

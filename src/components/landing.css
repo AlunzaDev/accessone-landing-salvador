@@ -1,2 +1,17 @@
 /* Ajustes locales de AccessOne El Salvador.
  * La base vive en @alunzadev/accessone-ui/styles/landing.css; aquí solo van diferencias de este país. */
+
+.scene-zero{background-image:url('/2 el salvador@4x.webp');background-size:cover;background-position:center 65%;background-repeat:no-repeat;background-color:#101b3b}
+.scene-zero-scroll{padding:8px 10px 8px 18px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(11,25,55,.42);backdrop-filter:blur(16px) saturate(145%);-webkit-backdrop-filter:blur(16px) saturate(145%);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 12px 32px rgba(0,0,0,.22);transition:background-color .25s ease,border-color .25s ease,transform .25s ease;animation:scene-scroll-nudge 6s 4s infinite}
+.scene-zero-scroll:hover{animation-play-state:paused;background:rgba(11,25,55,.58);border-color:rgba(254,237,0,.7);transform:translateY(-2px)}
+@keyframes scene-scroll-nudge{0%,70%,100%{transform:translateY(0)}76%{transform:translateY(-14px)}82%{transform:translateY(0)}87%{transform:translateY(-7px)}92%{transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.scene-zero-scroll{animation:none}}
+
+.accessone-real-video{display:block;width:100%;max-width:1200px;margin:0 auto;aspect-ratio:16/9;object-fit:cover;border-radius:18px;background:#061b36;box-shadow:0 24px 60px rgba(0,0,0,.24)}
+.accessone-real-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.accessone-real-gallery figure{margin:0;min-height:220px;overflow:hidden;border-radius:16px;background:#e8edf2}
+.accessone-real-gallery figure:first-child{grid-column:span 2;grid-row:span 2}
+.accessone-real-gallery img{display:block;width:100%;height:100%;min-height:220px;object-fit:cover;transition:transform .45s ease}
+.accessone-real-gallery figure:hover img{transform:scale(1.025)}
+@media(max-width:900px){.accessone-real-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.accessone-real-gallery{grid-template-columns:1fr}.accessone-real-gallery figure:first-child{grid-column:auto;grid-row:auto}}
