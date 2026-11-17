@@ -35,6 +35,7 @@ const homeServices: [IconName, string, string][] = [
 export default function Landing() {
   return <div className="shell">
     <section className="scene-zero" id="inicio" aria-labelledby="scene-zero-title">
+      <img className="scene-zero-brand" src="/salvadorclaro@4x.png" alt="AccessOne Parking El Salvador" />
       <div className="scene-zero-copy"><h1 id="scene-zero-title">Diseño, mantenimiento y operación de parqueos</h1></div>
       <a className="scene-zero-scroll" href="#experiencia" aria-label="Continuar a la siguiente sección">Descubrí más <span>↓</span></a>
     </section>

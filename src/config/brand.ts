@@ -18,7 +18,6 @@ export const navigation: readonly NavigationLink[] = [
   { href: '/', label: 'Inicio' },
   { href: '/nosotros', label: 'Nosotros' },
   { href: '/servicios', label: 'Servicios' },
-  { href: '/factura', label: 'Obtené tu factura' },
   { href: '/contacto', label: 'Contacto' },
   { href: '/aviso-de-privacidad', label: 'Aviso de privacidad' },
 ];
