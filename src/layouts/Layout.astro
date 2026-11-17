@@ -2,9 +2,43 @@
 import { ACCESSONE_THEME_COLOR } from '@alunzadev/accessone-ui';
 import '@alunzadev/accessone-ui/styles/tokens.css';
 
-interface Props { title: string; description: string }
-const { title, description } = Astro.props;
+interface Props { title: string; description: string; noindex?: boolean }
+const { title, description, noindex = false } = Astro.props;
+const siteUrl = new URL('https://accessone.com.sv');
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl);
+const alternateGt = new URL(Astro.url.pathname, 'https://accessone.com.gt');
+const alternateSv = new URL(Astro.url.pathname, 'https://accessone.com.sv');
+const socialImage = new URL('/scene-zero-background-v2.png', siteUrl);
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}#organization`,
+      name: 'AccessOne El Salvador',
+      url: siteUrl.toString(),
+      logo: new URL('/elsalvador@4x.png', siteUrl).toString(),
+      description: 'Administración, operación, tecnología y mantenimiento de parqueos y estacionamientos en El Salvador.',
+      areaServed: { '@type': 'Country', name: 'El Salvador' }
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}#website`,
+      url: siteUrl.toString(),
+      name: 'AccessOne El Salvador',
+      inLanguage: 'es-SV',
+      publisher: { '@id': `${siteUrl}#organization` }
+    },
+    {
+      '@type': 'Service',
+      name: 'Administración y operación de parqueos y estacionamientos',
+      provider: { '@id': `${siteUrl}#organization` },
+      areaServed: { '@type': 'Country', name: 'El Salvador' },
+      serviceType: ['Administración de parqueos', 'Operación de estacionamientos', 'Control de acceso vehicular', 'Mantenimiento de estacionamientos']
+    }
+  ]
+};
 ---
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="icon" type="image/svg+xml" href="/fabicon.svg" /><link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous" /><link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous" /><link rel="preload" href="/fonts/manrope-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous" /><meta name="description" content={description} /><meta name="theme-color" content={ACCESSONE_THEME_COLOR} /><title>{title}</title></head><body><slot /></body></html>
+<html lang="es-SV"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="icon" type="image/svg+xml" href="/fabicon.svg" /><link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous" /><link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous" /><link rel="preload" href="/fonts/manrope-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous" /><meta name="description" content={description} /><meta name="theme-color" content={ACCESSONE_THEME_COLOR} /><meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'} /><link rel="canonical" href={canonicalUrl} /><link rel="alternate" hreflang="es-GT" href={alternateGt} /><link rel="alternate" hreflang="es-SV" href={alternateSv} /><link rel="alternate" hreflang="x-default" href={alternateSv} /><meta property="og:type" content="website" /><meta property="og:locale" content="es_SV" /><meta property="og:site_name" content="AccessOne El Salvador" /><meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:url" content={canonicalUrl} /><meta property="og:image" content={socialImage} /><meta property="og:image:alt" content="AccessOne El Salvador, soluciones para parqueos y estacionamientos" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} /><meta name="twitter:image" content={socialImage} /><script type="application/ld+json" set:html={JSON.stringify(structuredData)} /><title>{title}</title></head><body><slot /></body></html>
 <style>:global(*){box-sizing:border-box}html,body{margin:0;width:100%;min-height:100%;scroll-behavior:smooth}body{background:var(--accessone-color-background)}</style>
