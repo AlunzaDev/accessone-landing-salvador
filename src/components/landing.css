@@ -1,7 +1,7 @@
 /* Ajustes locales de AccessOne El Salvador.
  * La base vive en @alunzadev/accessone-ui/styles/landing.css; aquí solo van diferencias de este país. */
 
-.scene-zero{background-image:linear-gradient(0deg,rgba(6,27,54,.5),rgba(6,27,54,.04) 58%),url('/scene-zero-background-v2.png');background-size:cover;background-position:center 58%;background-repeat:no-repeat;background-color:#101b3b}
+.scene-zero{background-image:linear-gradient(0deg,rgba(6,27,54,.58),rgba(6,27,54,.12) 58%),url('/scene-zero-background.webp');background-size:cover;background-position:center 58%;background-repeat:no-repeat;background-color:#101b3b}
 .scene-zero-brand{position:absolute;z-index:-1;top:52%;left:50%;width:min(48vw,820px);height:auto;transform:translate(-50%,-50%);filter:drop-shadow(0 8px 28px rgba(0,0,0,.2))}
 @media(max-width:700px){.scene-zero{background-position:center center}.scene-zero-brand{top:40%;width:min(88vw,520px)}}
 @media(max-width:420px){.scene-zero-brand{top:38%;width:90vw}}
@@ -16,6 +16,7 @@
 .accessone-real-gallery figure:first-child{grid-column:span 2;grid-row:span 2}
 .accessone-real-gallery img{display:block;width:100%;height:100%;min-height:220px;object-fit:cover;transition:transform .45s ease}
 .accessone-real-gallery figure:hover img{transform:scale(1.025)}
+.services-intro .tag,.directory-heading .tag,.form-heading .tag,.home-metrics small,.directory-grid article>small{color:#626580}
 @media(max-width:900px){.accessone-real-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.accessone-real-gallery{grid-template-columns:1fr}.accessone-real-gallery figure:first-child{grid-column:auto;grid-row:auto}}
 /* Carrusel morfológico de las cinco soluciones */

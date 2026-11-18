@@ -28,15 +28,15 @@ const services: { icon: IconName; title: string; text: string; items?: string[] 
       <p>Integramos infraestructura, tecnología y atención para crear soluciones confiables, adaptables y centradas en la experiencia de cada usuario.</p>
     </div>
   </section>
-  <section class="solutions services-catalog"><ServiceCatalog client:load ctaLabel="Contanos sobre tu proyecto" services={services.map(({ text, ...service }) => ({ ...service, description: text }))} /></section>
+  <section class="solutions services-catalog"><ServiceCatalog client:visible ctaLabel="Contanos sobre tu proyecto" services={services.map(({ text, ...service }) => ({ ...service, description: text }))} /></section>
   <section class="accessone-media-section" aria-labelledby="services-gallery-title">
     <div class="accessone-media-section__heading"><div><p class="tag">En campo</p><h2 id="services-gallery-title">Nuestros servicios, en acción.</h2></div></div>
     <div class="accessone-real-gallery">
-      <figure><img src="/OPERACION DE ESTACIONAMIENTO.png" alt="Operación profesional de estacionamiento" loading="lazy" /></figure>
-      <figure><img src="/ACCESO.png" alt="Control de acceso vehicular" loading="lazy" /></figure>
-      <figure><img src="/TECNOLOGIA.png" alt="Tecnología para control de estacionamientos" loading="lazy" /></figure>
-      <figure><img src="/2.png" alt="Control de acceso mediante torniquetes" loading="lazy" /></figure>
+      <figure><img src="/OPERACION-DE-ESTACIONAMIENTO.webp" alt="Operación profesional de estacionamiento" width="1200" height="896" loading="lazy" decoding="async" /></figure>
+      <figure><img src="/ACCESO.webp" alt="Control de acceso vehicular" width="1200" height="896" loading="lazy" decoding="async" /></figure>
+      <figure><img src="/TECNOLOGIA.webp" alt="Tecnología para control de estacionamientos" width="1200" height="900" loading="lazy" decoding="async" /></figure>
+      <figure><img src="/control-acceso.webp" alt="Control de acceso mediante torniquetes" width="1200" height="900" loading="lazy" decoding="async" /></figure>
     </div>
   </section>
-  <section class="service-proof"><p class="tag">Trayectoria construida en México</p><strong><CountUp client:load value={30000} prefix="+" /></strong><h2>espacios de parqueo</h2><p>Experiencia desarrollada en México en parqueos, hospitales, clubes deportivos, exposiciones y centros comerciales; conocimiento que ahora ponemos al servicio de proyectos en El Salvador.</p><a href="/contacto">Contanos sobre tu proyecto <b>↗</b></a></section>
+  <section class="service-proof"><p class="tag">Trayectoria construida en México</p><strong><CountUp client:visible value={30000} prefix="+" /></strong><h2>espacios de parqueo</h2><p>Experiencia desarrollada en México en parqueos, hospitales, clubes deportivos, exposiciones y centros comerciales; conocimiento que ahora ponemos al servicio de proyectos en El Salvador.</p><a href="/contacto">Contanos sobre tu proyecto <b>↗</b></a></section>
 </InteriorLayout>
