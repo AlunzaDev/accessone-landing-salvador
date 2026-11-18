@@ -42,3 +42,14 @@
   .home-service-grid>.accessone-service-card{animation:none!important;transition:none}
 }
 
+/* Introducción de servicios compacta, con el contenido equilibrado */
+.services-intro{grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:clamp(32px,5vw,78px);align-items:center;padding:clamp(58px,6vw,82px) 7vw}
+.services-intro h2{max-width:760px;margin-top:14px;font-size:clamp(38px,4.7vw,62px);line-height:1.03;letter-spacing:-.048em}
+.services-intro-copy{padding-bottom:0}
+@media(max-width:780px){
+  .services-intro{display:block;padding-top:54px;padding-bottom:54px}
+  .services-intro h2{margin-top:18px}
+  .services-intro-copy{margin-top:26px}
+}
+@media(max-width:680px){.services-intro{padding-top:48px;padding-bottom:48px}}
+
